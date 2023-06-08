@@ -1,0 +1,109 @@
+MAIN           inicio do programa
+ALOC 3         alocando o espaço na memoria para 3 variaveis
+LDCT 0         carrega o valor 0
+STVL 0,0       armazena o valor na variavel a
+LDCT 0         carrega o valor 0
+STVL 0,1       armazena o valor na variavel b
+LDCT 0         carrega o valor 0
+STVL 0,2       armazena o valor na variavel c
+READ           lendo o teclado
+STVL 0,0       carrega o valor no endereco de memoria 0,0 que corresponde a variavel.: a
+READ           lendo o teclado
+STVL 0,1       carrega o valor no endereco de memoria 0,1 que corresponde a variavel.: b
+READ           lendo o teclado
+STVL 0,2       carrega o valor no endereco de memoria 0,2 que corresponde a variavel.: c
+LDVL 0,0       carrega o valor da variavel que esta no endereco 0,0 e que corresponde a variavel.: a
+LDVL 0,1       carrega o valor da variavel que esta no endereco 0,1 e que corresponde a variavel.: b
+ADDD           soma
+LDVL 0,2       carrega o valor da variavel que esta no endereco 0,2 e que corresponde a variavel.: c
+GRTR           maior
+JMPF L1        pula se for falso(SE)
+
+LDVL 0,0       carrega o valor da variavel que esta no endereco 0,0 e que corresponde a variavel.: a
+LDVL 0,2       carrega o valor da variavel que esta no endereco 0,2 e que corresponde a variavel.: c
+ADDD           soma
+LDVL 0,1       carrega o valor da variavel que esta no endereco 0,1 e que corresponde a variavel.: b
+GRTR           maior
+JMPF L2        pula se for falso(SE)
+
+LDVL 0,1       carrega o valor da variavel que esta no endereco 0,1 e que corresponde a variavel.: b
+LDVL 0,2       carrega o valor da variavel que esta no endereco 0,2 e que corresponde a variavel.: c
+ADDD           soma
+LDVL 0,0       carrega o valor da variavel que esta no endereco 0,0 e que corresponde a variavel.: a
+GRTR           maior
+JMPF L3        pula se for falso(SE)
+
+LDVL 0,0       carrega o valor da variavel que esta no endereco 0,0 e que corresponde a variavel.: a
+LDVL 0,1       carrega o valor da variavel que esta no endereco 0,1 e que corresponde a variavel.: b
+EQUA           igual
+JMPF L4        pula se for falso(SE)
+
+LDVL 0,1       carrega o valor da variavel que esta no endereco 0,1 e que corresponde a variavel.: b
+LDVL 0,2       carrega o valor da variavel que esta no endereco 0,2 e que corresponde a variavel.: c
+EQUA           igual
+JMPF L5        pula se for falso(SE)
+
+LDCT 1         carregando o valor.: 1
+PRNT           imprimindo
+JUMP L6        fim_se
+
+L5: NOOP       senao
+LDCT 2         carregando o valor.: 2
+PRNT           imprimindo
+
+L6: NOOP       fimse
+JUMP L7        fim_se
+
+L4: NOOP       senao
+LDVL 0,0       carrega o valor da variavel que esta no endereco 0,0 e que corresponde a variavel.: a
+LDVL 0,2       carrega o valor da variavel que esta no endereco 0,2 e que corresponde a variavel.: c
+EQUA           igual
+JMPF L8        pula se for falso(SE)
+
+LDCT 2         carregando o valor.: 2
+PRNT           imprimindo
+JUMP L9        fim_se
+
+L8: NOOP       senao
+LDVL 0,1       carrega o valor da variavel que esta no endereco 0,1 e que corresponde a variavel.: b
+LDVL 0,2       carrega o valor da variavel que esta no endereco 0,2 e que corresponde a variavel.: c
+EQUA           igual
+JMPF L10       pula se for falso(SE)
+
+LDCT 2         carregando o valor.: 2
+PRNT           imprimindo
+JUMP L11       fim_se
+
+L10: NOOP      senao
+LDCT 3         carregando o valor.: 3
+PRNT           imprimindo
+
+L11: NOOP      fimse
+
+L9: NOOP       fimse
+
+L7: NOOP       fimse
+JUMP L12       fim_se
+
+L3: NOOP       senao
+LDCT 0         carregando o valor.: 0
+PRNT           imprimindo
+
+L12: NOOP      fimse
+JUMP L13       fim_se
+
+L2: NOOP       senao
+LDCT 0         carregando o valor.: 0
+PRNT           imprimindo
+
+L13: NOOP      fimse
+JUMP L14       fim_se
+
+L1: NOOP       senao
+LDCT 0         carregando o valor.: 0
+PRNT           imprimindo
+
+L14: NOOP      fimse
+DLOC 3         limpando a memoria
+STOP           para a execusao
+END            fim do programa

@@ -1,0 +1,84 @@
+MAIN           inicio do programa
+ALOC 6         alocando o espaço na memoria para 6 variaveis
+LDCT 0         carrega o valor 0
+STVL 0,0       armazena o valor na variavel totallinhas
+LDCT 0         carrega o valor 0
+STVL 0,1       armazena o valor na variavel linha
+LDCT 0         carrega o valor 0
+STVL 0,2       armazena o valor na variavel coluna
+LDCT 0         carrega o valor 0
+STVL 0,3       armazena o valor na variavel resultado
+LDCT 0         carrega o valor 0
+STVL 0,4       armazena o valor na variavel coeficiente
+LDCT 0         carrega o valor 0
+STVL 0,5       armazena o valor na variavel i
+READ           lendo o teclado
+STVL 0,0       carrega o valor no endereco de memoria 0,0 que corresponde a variavel.: totallinhas
+LDCT 0         carregando o valor.: 0
+STVL 0,1       carrega o valor no endereco de memoria 0,1 que corresponde a variavel.: linha
+
+L1: NOOP       laco - repita - bis
+LDVL 0,1       carrega o valor da variavel que esta no endereco 0,1 e que corresponde a variavel.: linha
+LDVL 0,0       carrega o valor da variavel que esta no endereco 0,0 e que corresponde a variavel.: totallinhas
+LESS           menor
+JMPF L2        fim do repita
+LDCT 0         carregando o valor.: 0
+STVL 0,2       carrega o valor no endereco de memoria 0,2 que corresponde a variavel.: coluna
+
+L3: NOOP       laco - repita - bis
+LDVL 0,2       carrega o valor da variavel que esta no endereco 0,2 e que corresponde a variavel.: coluna
+LDVL 0,1       carrega o valor da variavel que esta no endereco 0,1 e que corresponde a variavel.: linha
+LEQU           menor igual
+JMPF L4        fim do repita
+LDCT 1         carregando o valor.: 1
+STVL 0,3       carrega o valor no endereco de memoria 0,3 que corresponde a variavel.: resultado
+LDCT 1         carregando o valor.: 1
+STVL 0,5       carrega o valor no endereco de memoria 0,5 que corresponde a variavel.: i
+
+L5: NOOP       laco - repita - bis
+LDVL 0,5       carrega o valor da variavel que esta no endereco 0,5 e que corresponde a variavel.: i
+LDVL 0,2       carrega o valor da variavel que esta no endereco 0,2 e que corresponde a variavel.: coluna
+LEQU           menor igual
+JMPF L6        fim do repita
+LDVL 0,3       carrega o valor da variavel que esta no endereco 0,3 e que corresponde a variavel.: resultado
+LDVL 0,1       carrega o valor da variavel que esta no endereco 0,1 e que corresponde a variavel.: linha
+LDVL 0,5       carrega o valor da variavel que esta no endereco 0,5 e que corresponde a variavel.: i
+SUBT           subtracao
+LDCT 1         carregando o valor.: 1
+ADDD           soma
+MULT           multiplicacao
+STVL 0,3       carrega o valor no endereco de memoria 0,3 que corresponde a variavel.: resultado
+LDVL 0,3       carrega o valor da variavel que esta no endereco 0,3 e que corresponde a variavel.: resultado
+LDVL 0,5       carrega o valor da variavel que esta no endereco 0,5 e que corresponde a variavel.: i
+DIVI           divisao
+STVL 0,3       carrega o valor no endereco de memoria 0,3 que corresponde a variavel.: resultado
+LDVL 0,5       carrega o valor da variavel que esta no endereco 0,5 e que corresponde a variavel.: i
+LDCT 1         carregando o valor.: 1
+ADDD           soma
+STVL 0,5       carrega o valor no endereco de memoria 0,5 que corresponde a variavel.: i
+JUMP L5        fim do laco - fim_repita - bis
+
+L6: NOOP       continuacao da repeticao do l6
+LDVL 0,3       carrega o valor da variavel que esta no endereco 0,3 e que corresponde a variavel.: resultado
+STVL 0,4       carrega o valor no endereco de memoria 0,4 que corresponde a variavel.: coeficiente
+LDVL 0,4       carrega o valor da variavel que esta no endereco 0,4 e que corresponde a variavel.: coeficiente
+PRNT           imprime em tela o valor da variavel.: coeficiente
+LDVL 0,2       carrega o valor da variavel que esta no endereco 0,2 e que corresponde a variavel.: coluna
+LDCT 1         carregando o valor.: 1
+ADDD           soma
+STVL 0,2       carrega o valor no endereco de memoria 0,2 que corresponde a variavel.: coluna
+JUMP L3        fim do laco - fim_repita - bis
+
+L4: NOOP       continuacao da repeticao do l6
+LDCT 0         carregando o valor.: 0
+PRNT           imprimindo
+LDVL 0,1       carrega o valor da variavel que esta no endereco 0,1 e que corresponde a variavel.: linha
+LDCT 1         carregando o valor.: 1
+ADDD           soma
+STVL 0,1       carrega o valor no endereco de memoria 0,1 que corresponde a variavel.: linha
+JUMP L1        fim do laco - fim_repita - bis
+
+L2: NOOP       continuacao da repeticao do l6
+DLOC 6         limpando a memoria
+STOP           para a execusao
+END            fim do programa
