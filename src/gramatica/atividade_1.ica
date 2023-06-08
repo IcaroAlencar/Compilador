@@ -1,0 +1,44 @@
+GO{
+    INT &a, &b, &c;
+    
+    LE(&a);
+    LE(&b);
+    LE(&c);
+
+    SE(&a + &b > &c){
+        SE(&a + &c > &b){
+            SE(&b +&c > &a){
+                SE(&a == &b){
+                    SE(&b == &c){
+                        ESC(1);
+                    }; 
+                    ~SE{
+                        ESC(2);
+                    };
+                };
+                ~SE{
+                    SE(&a == &c){
+			ESC(2);
+                    };
+                    ~SE{
+			SE(&b == &c){
+                            ESC(2);
+			};
+			~SE{
+                            ESC(3);
+			};
+                    };
+		};
+            };
+            ~SE{
+		ESC(0);
+            };
+	};
+	~SE{
+            ESC(0);
+        };
+    };
+    ~SE{
+        ESC(0);
+    };
+}END

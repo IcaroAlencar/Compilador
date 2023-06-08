@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/gerador/Final.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>14</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/icaroalencar/Downloads/Compilador/src/gramatica/atividade_1.ica</file>
+            <file>file:/Users/icaroalencar/Downloads/Compilador/src/gramatica/atividade_2.ica</file>
+            <file>file:/Users/icaroalencar/Downloads/Compilador/src/analise/App.java</file>
+            <file>file:/Users/icaroalencar/Downloads/Compilador/src/analise/sintatico/Sintatico.java</file>
+            <file>file:/Users/icaroalencar/Downloads/Compilador/src/analise/lexico/Lexico.java</file>
+            <file>file:/Users/icaroalencar/Downloads/Compilador/src/analise/semantica/Semantico.java</file>
+            <file>file:/Users/icaroalencar/Downloads/Compilador/src/gerador/Intermediario.java</file>
+            <file>file:/Users/icaroalencar/Downloads/Compilador/src/gerador/Final.java</file>
+        </group>
+    </open-files>
+</project-private>

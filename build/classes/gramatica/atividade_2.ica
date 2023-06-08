@@ -1,0 +1,24 @@
+GO{
+    INT &totallinhas, &linha, &coluna, &resultado, &coeficiente, &i;
+
+    LE(&totallinhas);
+
+    &linha <== 0;
+    BIS(&linha < &totallinhas){                                  
+        &coluna <== 0;                                          
+        BIS(&coluna <= &linha){                                
+            &resultado <== 1;                                  
+            &i <== 1;                                           
+            BIS(&i <= &coluna){                             
+                &resultado <== &resultado * (&linha - &i + 1);  
+                &resultado <== &resultado / &i;                 
+                &i <== &i + 1;                                 
+            };                                                 
+            &coeficiente <== &resultado;                      
+            ESC(&coeficiente);                                 
+            &coluna <== &coluna + 1;                            
+        };  
+        ESC(0);
+        &linha <== &linha + 1;                                  
+    };                                                          
+}END 
